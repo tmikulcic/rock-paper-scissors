@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  padding: 30px 15px;
+  background-color: brown;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.instructions {
+  font-size: 30px;
+  margin: 0 300px;
+}
+
+.button-choice {
+  background-color: brown;
+  height: 60px;
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  border-color: brown;
+  border-radius: 10px;
+}
