@@ -8,30 +8,52 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <script src="computerPlay.js"></script>
     <h1 class="header">Rock Paper Scissors Game</h1>
     <p class="instructions">First player to reach 5 points wins!</p>
     <p class="instructions">Choose your hand play</p>
-    <input
-      id="Rock"
-      type="button"
-      class="button-choice"
-      value="Rock"
-      onclick="Rock();"
-    />
-    <input
-      id="Paper"
-      type="button"
-      class="button-choice"
-      value="Paper"
-      onclick="Paper();"
-    />
-    <input
-      id="Scissors"
-      type="button"
-      class="button-choice"
-      value="Scissors"
-      onclick="Scissors();"
-    />
+    <div class="main-container">
+      <div class="score-container">
+        <p class="instructions">Player Score:</p>
+        <p class="player-score" id="player"></p>
+      </div>
+      <div class="button-container">
+        <span class="button-box">
+          <img src="./photos/rock.png" alt="rock" />
+          <input
+            id="Rock"
+            type="button"
+            class="button-choice"
+            value="Rock"
+            onclick="Rock();"
+          />
+        </span>
+
+        <span class="button-box">
+          <img src="./photos/paper.png" alt="paper" />
+          <input
+            id="Paper"
+            type="button"
+            class="button-choice"
+            value="Paper"
+            onclick="Paper();"
+          />
+        </span>
+        <span class="button-box">
+          <img src="./photos/scissors.png" alt="scissors" />
+          <input
+            id="Scissors"
+            type="button"
+            class="button-choice"
+            value="Scissors"
+            onclick="Scissors();"
+          />
+        </span>
+      </div>
+      <div class="score-container">
+        <p class="instructions">Computer Score:</p>
+        <p class="computer-score" id="cpu"></p>
+      </div>
+    </div>
+    <script src="computerPlay.js"></script>
   </body>
 </html>

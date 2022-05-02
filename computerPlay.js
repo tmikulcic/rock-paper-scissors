@@ -3,6 +3,9 @@ let player = '';
 let playerScore = 0;
 let cpuScore = 0;
 
+document.getElementById('player').innerHTML = playerScore;
+document.getElementById('cpu').innerHTML = cpuScore;
+
 function ComputerPlay() {
   return computer[Math.floor(Math.random() * computer.length)];
 }
@@ -24,12 +27,11 @@ function Scissors() {
   Round(player, computer[Math.floor(Math.random() * computer.length)]);
 }
 
-function Victory() { }
+function Victory() {}
 
-function Defeat(){}
+function Defeat() {}
 
 function Round(player, computer) {
-  console.log(player + ' ' + playerScore + ' ' + computer + ' ' + cpuScore);
   if (playerScore === 5) console.log('Victory');
   else if (cpuScore === 5) console.log('Defeat');
 
@@ -39,19 +41,15 @@ function Round(player, computer) {
     (player === 'scissors' && computer === 'paper')
   ) {
     playerScore++;
+    document.getElementById('player').innerHTML = playerScore;
     return console.log('You win');
-  }
-
-  else if (
+  } else if (
     (player === 'rock' && computer === 'paper') ||
     (player === 'scissors' && computer === 'rock') ||
     (player === 'paper' && computer === 'scissors')
   ) {
     cpuScore++;
+    document.getElementById('cpu').innerHTML = cpuScore;
     return console.log('You lose');
-  }
-    
-  else console.log(`It's a tie`);
-
- 
+  } else console.log(`It's a tie`);
 }
